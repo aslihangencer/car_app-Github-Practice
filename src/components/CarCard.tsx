@@ -12,7 +12,7 @@ export default function CarCard({ car, onSelect, isSelected }: Props) {
     const formatPrice = (p: number) => (p >= 1000000 ? (p / 1000000).toFixed(2) + ' M ₺' : p.toLocaleString('tr-TR') + ' ₺');
 
     return (
-        <div className={`group relative bg-slate-900 border-2 rounded-3xl overflow-hidden transition-all duration-500 ${isSelected ? 'border-blue-500 scale-[1.02] shadow-2xl shadow-blue-500/20' : 'border-slate-800/50 hover:border-slate-700'}`}>
+       <div className={`group relative bg-slate-900 border-2 rounded-3xl overflow-hidden transition-all duration-500 ${isSelected ? 'border-blue-500 scale-[1.02] shadow-2xl shadow-blue-500/20 ring-2 ring-blue-500/30' : 'border-slate-800/50 hover:border-slate-700'}`}>
             <div className="aspect-[16/10] bg-slate-800 relative overflow-hidden">
                 <img 
                   src={car.image || 'https://via.placeholder.com/400x250?text=Görsel+Hazırlanıyor'} 
